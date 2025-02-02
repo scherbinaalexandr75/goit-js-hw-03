@@ -5,6 +5,13 @@
 // Усі символи slug повинні бути в нижньому регістрі.
 // Усі слова slug повинні бути розділені тире.
 
+function slugify(title) {
+  title = title.toLowerCase();
+  title = title.split(" ");
+  title = title.join("-");
+  return title;
+}
+
 console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
