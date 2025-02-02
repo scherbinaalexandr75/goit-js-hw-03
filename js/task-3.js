@@ -11,6 +11,18 @@
 // кожного елемента и додавання до свого масиву.
 // Поверни свій новий масив з підходящими числами як результат.
 
+function filterArray(numbers, value) {
+  let newArray = [];
+  let count = 0;
+  for (let i = 0; i <= numbers.length; i += 1) {
+    if (numbers[i] > value) {
+      newArray[count] = numbers[i];
+      count++;
+    }
+  }
+  return newArray;
+}
+
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
 console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
 console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
